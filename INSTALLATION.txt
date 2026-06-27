@@ -1,0 +1,251 @@
+===========================================
+  ZEROLYTIX IP OSINT TOOL - INSTALLATION
+        (LINUX & TERMUX)
+===========================================
+
+📌 REQUIREMENTS:
+- Linux (Ubuntu/Debian/Kali) OR Termux (Android)
+- Python 3.6 or higher
+- pip (Python package manager)
+- Internet connection (for API calls)
+
+===========================================
+  STEP 1: INSTALL PYTHON & DEPENDENCIES
+===========================================
+
+🔹 For LINUX (Ubuntu/Debian/Kali):
+   sudo apt update
+   sudo apt install python3 python3-pip python3-venv git -y
+
+🔹 For TERMUX (Android):
+   pkg update && pkg upgrade
+   pkg install python python-pip git -y
+
+===========================================
+  STEP 2: DOWNLOAD THE TOOL
+===========================================
+
+🔹 Clone repository:
+   git clone https://github.com/zerolytix/ip-tracker.git
+   cd ip-tracker
+
+🔹 OR download ZIP (if git not available):
+   wget https://github.com/zerolytix/ip-tracker/archive/main.zip
+   unzip main.zip
+   cd ip-tracker-main
+
+===========================================
+  STEP 3: CREATE VIRTUAL ENVIRONMENT (Optional)
+===========================================
+
+🔹 For LINUX:
+   python3 -m venv venv
+   source venv/bin/activate
+
+🔹 For TERMUX:
+   python -m venv venv
+   source venv/bin/activate
+
+✅ You should see (venv) at the beginning of your terminal
+
+===========================================
+  STEP 4: INSTALL DEPENDENCIES
+===========================================
+
+🔹 Make sure (venv) is active
+🔹 Install requirements:
+   pip install -r requirements.txt
+
+🔹 OR install manually:
+   pip install requests
+   pip install ipaddress
+   pip install colorama
+
+🔹 Upgrade pip (recommended):
+   pip install --upgrade pip
+
+===========================================
+  STEP 5: VERIFY INSTALLATION
+===========================================
+
+🔹 Test if everything works:
+   python3 -c "import requests, ipaddress, colorama; print('✅ All modules installed successfully!')"
+
+✅ If no error shows, installation is complete!
+
+===========================================
+  STEP 6: RUN THE TOOL
+===========================================
+
+🔹 Make sure (venv) is active
+🔹 Run:
+   python3 IP-Tracker.py
+
+🔹 OR make executable and run:
+   chmod +x IP-Tracker.py
+   ./IP-Tracker.py
+
+===========================================
+  COMPLETE FILE STRUCTURE
+===========================================
+
+ip-tracker/
+│
+├── IP-Tracker.py          # Main tool script
+├── requirements.txt       # Python dependencies
+├── INSTALLATION.txt      # This installation guide
+├── README.md             # Complete documentation
+└── LICENSE               # MIT License
+
+===========================================
+  TROUBLESHOOTING (LINUX & TERMUX)
+===========================================
+
+❌ ERROR: "python3 command not found"
+SOLUTION (Linux):
+   sudo apt install python3 python3-pip
+SOLUTION (Termux):
+   pkg install python
+
+❌ ERROR: "pip not found"
+SOLUTION (Linux):
+   sudo apt install python3-pip
+SOLUTION (Termux):
+   pkg install python-pip
+
+❌ ERROR: "ModuleNotFoundError: No module named 'requests'"
+SOLUTION:
+   pip install requests
+
+❌ ERROR: "Permission denied"
+SOLUTION:
+   Use sudo (Linux) OR chmod +x IP-Tracker.py
+
+❌ ERROR: "Virtual environment not activating"
+SOLUTION (Linux):
+   source venv/bin/activate
+SOLUTION (Termux):
+   source venv/bin/activate
+
+❌ ERROR: "git command not found"
+SOLUTION (Linux):
+   sudo apt install git
+SOLUTION (Termux):
+   pkg install git
+
+❌ ERROR: "wget command not found"
+SOLUTION (Linux):
+   sudo apt install wget
+SOLUTION (Termux):
+   pkg install wget
+
+❌ ERROR: "unzip command not found"
+SOLUTION (Linux):
+   sudo apt install unzip
+SOLUTION (Termux):
+   pkg install unzip
+
+❌ ERROR: API connection timeout
+SOLUTION:
+   - Check internet connection
+   - Try: ping google.com
+   - Use mobile hotspot (Termux)
+
+===========================================
+  QUICK START (COPY-PASTE COMMANDS)
+===========================================
+
+🔹 For LINUX (Complete Setup):
+   git clone https://github.com/zerolytix/ip-tracker.git
+   cd ip-tracker
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   python3 IP-Tracker.py
+
+🔹 For TERMUX (Complete Setup):
+   pkg update && pkg upgrade
+   pkg install python python-pip git -y
+   git clone https://github.com/zerolytix/ip-tracker.git
+   cd ip-tracker
+   python -m venv venv
+   source venv/bin/activate
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   python IP-Tracker.py
+
+===========================================
+  RUNNING WITHOUT VIRTUAL ENVIRONMENT
+===========================================
+
+If you don't want to use virtual environment:
+1. Skip STEP 3
+2. Directly install:
+   pip install -r requirements.txt
+3. Run:
+   python3 IP-Tracker.py
+
+⚠️ Note: This installs packages globally
+
+===========================================
+  FOR TERMUX USERS - SPECIAL NOTES
+===========================================
+
+🔹 Grant Storage Permission (if needed):
+   termux-setup-storage
+
+🔹 If you get SSL errors:
+   pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org requests
+
+🔹 For better display:
+   Use Termux with color support
+   Install: pkg install termux-api
+
+🔹 To exit virtual environment:
+   deactivate
+
+===========================================
+  AFTER INSTALLATION
+===========================================
+
+✅ Tool is ready to use!
+🔹 Enter any valid IP address when prompted
+🔹 View detailed geolocation and network data
+🔹 Save reports as .txt files
+🔹 Scan multiple IPs in one session
+
+📌 Your reports will be saved as: IP_Report_TIMESTAMP.txt
+
+===========================================
+  UNINSTALLATION
+===========================================
+
+1. Delete the tool folder:
+   rm -rf ip-tracker
+
+2. OR if using venv:
+   deactivate
+   rm -rf venv
+
+3. To uninstall Python packages:
+   pip uninstall requests ipaddress colorama
+
+===========================================
+  SUPPORT & CONTACT
+===========================================
+
+🔹 YouTube: https://www.youtube.com/@zerolytix
+🔹 Instagram: https://instagram.com/zerolytix
+🔹 TikTok: https://tiktok.com/@zerolytix
+🔹 GitHub: https://github.com/zerolytix
+🔹 Twitter X: https://x.com/zerolytix
+
+===========================================
+  ✅ INSTALLATION COMPLETE
+===========================================
+
+Now run: python3 IP-Tracker.py
+Enjoy your OSINT tool! 🚀
+
+Made with ❤️ by ZEROLYTIX
