@@ -3,5 +3,4 @@
 
 
 
-![Image Alt](<img width="1679" height="878" alt="image" src="https://github.com/user-attachments/assets/c1e68481-fa90-4346-89d7-fa298aff6326" />
-)
+![Image Alt](https://github.com/zerolytixLab/IpTracker/blob/8228874345ad9d7237c2131a60b8d69fbe580d1f/Capture.PNG)
